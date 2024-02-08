@@ -6,16 +6,20 @@ import java.util.List;
 public class InsertionSort<T extends Comparable<T>> {
 
     public void sort(T[] arr, boolean isAscending){
+        int swaps=0;
         for(int i=1; i< arr.length; i++){
             int j = i-1;
             T key = arr[i];
 
             while(j >= 0 && arr[j].compareTo(key) > 0){
                 arr[j+1] = arr[j];
+                swaps++;
                 j--;
             }
             arr[j+1] = key;
+            swaps++;
         }
+        System.out.println("Total swaps "+ swaps);
     }
 
 
