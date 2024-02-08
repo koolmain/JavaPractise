@@ -6,7 +6,7 @@ import java.util.List;
 public class MergeSort<T extends  Comparable<T>> {
 
     void merge(T[] arr, int low, int mid, int high){
-
+        System.out.println("merge ("+low+", " + mid +", "+high+")");
         int n1 = mid -low + 1 ;
         int n2 = high - mid ;
 
@@ -51,9 +51,13 @@ public class MergeSort<T extends  Comparable<T>> {
    void sort(T[] arr, int low, int high){
         if(low < high){
             int mid = low + (high - low)/2;
+            System.out.println("sort ("+low+", "+mid+")");
             sort(arr,low,mid);
+            System.out.println("sort ("+(mid+1)+", "+high+")");
             sort(arr,mid+1, high);
+
             merge(arr,low,mid,high);
+
         }
     }
 
