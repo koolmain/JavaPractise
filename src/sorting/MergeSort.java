@@ -18,7 +18,7 @@ public class MergeSort<T extends  Comparable<T>> {
         }
 
         for(int j=0; j < n2; j++){
-            RightA[j] = arr[mid+j];
+            RightA[j] = arr[mid+1+j];
         }
 
         int i = 0,j = 0;
